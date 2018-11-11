@@ -1,11 +1,15 @@
 <template>
   <fieldset class="field">
     <legend v-if="schema.title">{{ schema.title }}</legend>
-    <template v-for="(item, index) in items">
-      <form-element :schema="schema.items" :value="item" :key="index" @input="updateValue($event, index)"></form-element>
-      <button type="button" v-if="items.length > 0" @click="items.splice(index, 1)" :key="`remove-${index}`">Remove</button>
-    </template>
-    <button type="button" @click="addItem()">Add Item</button>
+    <div v-for="(item, index) in items" class="columns">
+      <div class="column">
+        <form-element :schema="schema.items" :value="item" :key="index" @input="updateValue($event, index)"></form-element>
+      </div>
+      <div class="column is-narrow">
+        <button type="button" class="button is-danger" v-if="items.length > 0" @click="items.splice(index, 1)" :key="`remove-${index}`">Remove</button>
+      </div>
+    </div>
+    <button type="button" class="button" @click="addItem()">Add Item</button>
   </fieldset>
 </template>
 
