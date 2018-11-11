@@ -80,6 +80,14 @@ export default {
             "description": "The person's last name.",
             "example": "Doe"
           },
+          "nickNames": {
+            "type": "array",
+            "title": "Nicknames",
+            "items": {
+              "type": "string",
+              "example": "j-dough"
+            }
+          },
           "age": {
             "title": "Age",
             "description": "Age in years which must be equal to or greater than zero.",
@@ -87,7 +95,9 @@ export default {
             "minimum": 0
           }
         },
-        "required": ["firstName"]
+        "required": [
+          "firstName"
+        ]
       },
       schemaIsValid: true,
       obj: {}
