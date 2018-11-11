@@ -56,6 +56,11 @@ export default {
       activeErrorMessages: [],
     }
   },
+  watch: {
+    schema() {
+      this.items = scaffoldFromSchema(this.schema)
+    }
+  },
   methods: {
     submit() {
       if (this.validate()) {
