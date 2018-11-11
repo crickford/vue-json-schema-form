@@ -19,31 +19,31 @@ export default {
     'schema',
     'value'
   ],
-  data () {
-    let component = TextElement
-    if (this.schema.widget !== undefined) {
-      // allow the schema to specify widget
-      // currently only textarea is supported
-      if (this.schema.widget === 'textarea') {
-        component = TextareaElement
+  computed: {
+    type() {
+      let component = TextElement
+      if (this.schema.widget !== undefined) {
+        // allow the schema to specify widget
+        // currently only textarea is supported
+        if (this.schema.widget === 'textarea') {
+          component = TextareaElement
+        }
+      } else if (this.schema.anyOf !== undefined) {
+        component = RadioButtonElement
+      } else if (this.schema.enum !== undefined) {
+        component = SelectElement
+      } else if (this.schema.type === 'boolean') {
+        component = CheckboxElement
+      } else if (this.schema.type === 'array') {
+        component = FormElementMultiple
+      } else if (this.schema.type === 'object') {
+        component = FormElementWrapper
+      } else if (this.schema.type === 'integer' || this.schema.type === 'number') {
+        component = NumberElement
+      } else if (this.schema.format === 'date') {
+        component = DatePickerElement
       }
-    } else if (this.schema.anyOf !== undefined) {
-      component = RadioButtonElement
-    } else if (this.schema.enum !== undefined) {
-      component = SelectElement
-    } else if (this.schema.type === 'boolean') {
-      component = CheckboxElement
-    } else if (this.schema.type === 'array') {
-      component = FormElementMultiple
-    } else if (this.schema.type === 'object') {
-      component = FormElementWrapper
-    } else if (this.schema.type === 'integer' || this.schema.type === 'number') {
-      component = NumberElement
-    } else if (this.schema.format === 'date') {
-      component = DatePickerElement
-    }
-    return {
-      type: component
+      return component
     }
   }
 }
