@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   fieldset {
     padding: 10px;
     border: none;

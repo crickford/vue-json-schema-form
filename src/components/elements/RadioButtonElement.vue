@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .radio-field {
   padding-left: 15px;
 }
