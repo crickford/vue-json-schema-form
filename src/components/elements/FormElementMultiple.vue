@@ -3,7 +3,7 @@
     <legend v-if="schema.title">{{ schema.title }}</legend>
     <template v-for="(item, index) in items">
       <form-element :schema="schema.items" :value="item" :key="index" @input="updateValue($event, index)"></form-element>
-      <button type="button" v-if="items.length > 0" @click="items.splice(index, 1)" :key="index">Remove</button>
+      <button type="button" v-if="items.length > 0" @click="items.splice(index, 1)" :key="`remove-${index}`">Remove</button>
     </template>
     <button type="button" @click="addItem()">Add Item</button>
   </fieldset>
