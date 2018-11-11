@@ -86,7 +86,8 @@ export default {
             "type": "integer",
             "minimum": 0
           }
-        }
+        },
+        "required": ["firstName"]
       },
       schemaIsValid: true,
       obj: {}
