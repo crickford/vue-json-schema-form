@@ -5,7 +5,7 @@
       <form-element :schema="schema.items" :value="item" :key="index" @input="updateValue($event, index)"></form-element>
       <button type="button" v-if="items.length > 0" @click="items.splice(index, 1)" :key="index">Remove</button>
     </template>
-    <button type="button" @click="items.push($scaffoldFromSchema(schema)[0])">Add Item</button>
+    <button type="button" @click="addItem()">Add Item</button>
   </fieldset>
 </template>
 
@@ -27,6 +27,9 @@ export default {
     }
   },
   methods: {
+    addItem() {
+      this.items.push(scaffoldFromSchema(this.schema)[0])
+    },
     updateValue (value, index) {
       this.items.splice(index, 1, value)
       this.$emit('input', this.items)
