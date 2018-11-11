@@ -2,9 +2,7 @@
   <div class="field checkbox-field">
     <b-checkbox :value="value" @input="$emit('input', $event)">
       <span class="checkbox-title">{{ schema.title }}</span>
-      <div class="content checkbox-desc" v-if="schema.description">
-        <vue-simple-markdown :source="schema.description"></vue-simple-markdown>
-      </div>
+      <div class="content checkbox-desc" v-if="schema.description">{{ schema.description }}</div>
     </b-checkbox>
   </div>
 </template>

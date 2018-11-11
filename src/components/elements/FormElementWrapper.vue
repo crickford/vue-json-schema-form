@@ -1,9 +1,7 @@
 <template>
   <fieldset class="field">
     <legend v-if="schema.title">{{ schema.title }}</legend>
-    <div class="content" v-if="schema.description">
-      <vue-simple-markdown :source="schema.description"></vue-simple-markdown>
-    </div>
+    <div class="content" v-if="schema.description">{{ schema.description }}</div>
     <form-element v-for="(child, key) in schema.properties" :schema="child" :value="value[key]" :key="key" @input="updateValue($event, key)"></form-element>
   </fieldset>
 </template>
