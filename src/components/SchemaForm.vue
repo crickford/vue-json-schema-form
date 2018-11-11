@@ -65,6 +65,7 @@ export default {
     submit() {
       if (this.validate()) {
         this.activeErrorMessages = []
+        this.$emit('input', pruneEmptyMembers(this.items))
         this.$emit('submit')
       }
       else {
@@ -94,7 +95,6 @@ export default {
     },
     updateValue (value, child) {
       this.items[child] = value
-      this.$emit('input', this.items)
     }
   }
 }
