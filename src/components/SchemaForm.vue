@@ -59,6 +59,7 @@ export default {
   watch: {
     schema() {
       this.items = scaffoldFromSchema(this.schema)
+      ajv = new Ajv({allErrors: true, jsonPointers: true, format: 'full'})
     }
   },
   methods: {
