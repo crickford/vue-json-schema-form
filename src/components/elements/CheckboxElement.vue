@@ -2,7 +2,7 @@
   <div class="field checkbox-field">
     <b-checkbox :value="value" @input="$emit('input', $event)">
       <span class="checkbox-title">{{ schema.title }}</span>
-      <div class="content checkbox-desc" v-if="schema.description">{{ schema.description }}</div>
+      <p class="help checkbox-desc" v-if="schema.description">{{ schema.description }}</p>
     </b-checkbox>
   </div>
 </template>
@@ -18,13 +18,6 @@ export default {
 </script>
 
 <style scoped>
-.checkbox-field {
-  padding-left: 15px;
-}
-.checkbox-title {
-  font-weight: bold;
-}
-
 .checkbox-title,
 .checkbox-desc {
   display: block;
