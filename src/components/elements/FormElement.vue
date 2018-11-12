@@ -9,6 +9,7 @@ import TextareaElement from '@/components/elements/TextareaElement'
 import NumberElement from '@/components/elements/NumberElement'
 import SelectElement from '@/components/elements/SelectElement'
 import CheckboxElement from '@/components/elements/CheckboxElement'
+import CheckboxGroupElement from '@/components/elements/CheckboxGroupElement'
 import RadioButtonElement from '@/components/elements/RadioButtonElement'
 import FormElementMultiple from '@/components/elements/FormElementMultiple'
 import DatePickerElement from '@/components/elements/DatePickerElement'
@@ -35,7 +36,7 @@ export default {
       } else if (this.schema.type === 'boolean') {
         component = CheckboxElement
       } else if (this.schema.type === 'array') {
-        component = FormElementMultiple
+        component = this.schema.items.anyOf === undefined ? FormElementMultiple : CheckboxGroupElement
       } else if (this.schema.type === 'object') {
         component = FormElementWrapper
       } else if (this.schema.type === 'integer' || this.schema.type === 'number') {
