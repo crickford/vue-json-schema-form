@@ -1,6 +1,6 @@
 {
   "name": "vue-json-schema-form",
-  "main": "./dist/vue-json-schema-form.common.js",
+  "main": "./dist/vue-json-schema-form.umd.js",
   "files": [
     "dist/*",
     "src/*",
