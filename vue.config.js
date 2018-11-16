@@ -8,8 +8,8 @@ module.exports = {
     if (config.get('mode') !== 'development') {
       config.externals({
         ...config.get('externals'),
-        ajv: 'ajv',
-        buefy: 'buefy'
+        ajv: 'Ajv',
+        buefy: 'Buefy'
       })
     }
   }
