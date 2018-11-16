@@ -1,13 +1,13 @@
 {
-  "name": "buefy-json-schema-form",
-  "main": "./dist/buefy-json-schema-form.common.js",
+  "name": "vue-json-schema-form",
+  "main": "./dist/vue-json-schema-form.common.js",
   "files": [
     "dist/*",
     "src/*",
     "*.json",
     "*.js"
   ],
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",

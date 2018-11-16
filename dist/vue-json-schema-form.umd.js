@@ -1,5 +1,14 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("buefy"), require("vue"), require("ajv"));
+	else if(typeof define === 'function' && define.amd)
+		define(["buefy", , "ajv"], factory);
+	else if(typeof exports === 'object')
+		exports["VueJsonSchemaForm"] = factory(require("buefy"), require("vue"), require("ajv"));
+	else
+		root["VueJsonSchemaForm"] = factory(root["buefy"], root["Vue"], root["ajv"]);
+})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__7a20__, __WEBPACK_EXTERNAL_MODULE__8bbf__, __WEBPACK_EXTERNAL_MODULE_b627__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -1091,7 +1100,7 @@ module.exports = function (exec) {
 /***/ "7a20":
 /***/ (function(module, exports) {
 
-module.exports = require("buefy");
+module.exports = __WEBPACK_EXTERNAL_MODULE__7a20__;
 
 /***/ }),
 
@@ -1431,7 +1440,7 @@ setToStringTag(global.JSON, 'JSON', true);
 /***/ "8bbf":
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = __WEBPACK_EXTERNAL_MODULE__8bbf__;
 
 /***/ }),
 
@@ -1615,7 +1624,7 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 /***/ "b627":
 /***/ (function(module, exports) {
 
-module.exports = require("ajv");
+module.exports = __WEBPACK_EXTERNAL_MODULE_b627__;
 
 /***/ }),
 
@@ -2918,4 +2927,5 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default.a.component('SchemaForm', S
 /***/ })
 
 /******/ })["default"];
-//# sourceMappingURL=buefy-json-schema-form.common.js.map
+});
+//# sourceMappingURL=VueJsonSchemaForm.umd.js.map
