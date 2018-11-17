@@ -1,6 +1,11 @@
 {
   "name": "vue-json-schema-form",
   "main": "./dist/vue-json-schema-form.umd.js",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/crickford/vue-json-schema-form.git"
+    },
+  "homepage": "https://github.com/crickford/vue-json-schema-form",
   "files": [
     "dist/*",
     "src/*",
