@@ -10,15 +10,14 @@ For more background on this concept, see [this article](https://blog.apisyouwont
 
 ## Install
 
-Depends on [Vue](https://vuejs.org), [Ajv](https://ajv.js.org), and for the default form elements, [Buefy](https://github.com/buefy/buefy)
-### NPM
+Depends on [Vue](https://vuejs.org), [Ajv](https://ajv.js.org) for validation, and  [Buefy](https://github.com/buefy/buefy) for the default form elements.
 ```
 npm install vue-json-schema-form
 ```
 
 ## Usage
 
-### Webpack
+#### Webpack
 Global registration:
 ```
 import Vue from 'vue'
@@ -40,7 +39,7 @@ export default {
 }
 ```
 
-### Browser / CDN
+#### Browser / CDN
 
 ```
 <!-- CSS -->
@@ -54,7 +53,9 @@ export default {
 Vue.use(VueJsonSchemaForm.default)
 ```
 ## Demo
-[Live Demo (Codepen)](https://codepen.io/crickford/pen/vQmKqY)
+Online demos:
+- [Basic](https://codepen.io/crickford/pen/vQmKqY)
+- [Custom Component (slots)](https://codepen.io/crickford/pen/ZmJqwd/)
 
 ### Run local demo
 ```
