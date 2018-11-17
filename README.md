@@ -19,11 +19,25 @@ npm install vue-json-schema-form
 ## Usage
 
 ### Webpack
+Global registration:
 ```
 import Vue from 'vue'
 import VueJsonSchemaForm from 'vue-json-schema-form'
 
 Vue.use(VueJsonSchemaForm)
+```
+Or in your components:
+
+```
+import {SchemaForm} from 'vue-json-schema-form'
+
+export default {
+  name: "MyComponent",
+  components: {
+    SchemaForm
+  },
+  ...
+}
 ```
 
 ### Browser / CDN
@@ -37,7 +51,7 @@ Vue.use(VueJsonSchemaForm)
 ```
 
 ```
-Vue.use(VueJsonSchemaForm)
+Vue.use(VueJsonSchemaForm.default)
 ```
 ## Demo
 [Live Demo (Codepen)](https://codepen.io/crickford/pen/vQmKqY)
