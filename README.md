@@ -15,49 +15,18 @@ Depends on [Vue](https://vuejs.org), [Ajv](https://ajv.js.org) for validation, a
 npm install vue-json-schema-form
 ```
 
-## Usage
+## Documentation
 
-#### Webpack
-Global registration:
-```
-import Vue from 'vue'
-import VueJsonSchemaForm from 'vue-json-schema-form'
+[Online Documentation](https://crickford.github.io/vue-json-schema-form/)
 
-Vue.use(VueJsonSchemaForm)
-```
-Or in your components:
-
-```
-import {SchemaForm} from 'vue-json-schema-form'
-
-export default {
-  name: "MyComponent",
-  components: {
-    SchemaForm
-  },
-  ...
-}
-```
-
-#### Browser / CDN
-
-```
-<!-- CSS -->
-<link rel="stylesheet" href="https://unpkg.com/vue-json-schema-form/dist/vue-json-schema-form.css">
-
-<!-- JavaScript -->
-<script src="https://unpkg.com/vue-json-schema-form"></script>
-```
-
-```
-Vue.use(VueJsonSchemaForm.default)
-```
 ## Demo
 Online demos:
 - [Basic](https://codepen.io/crickford/pen/vQmKqY)
 - [Custom Component (slots)](https://codepen.io/crickford/pen/ZmJqwd/)
 
 ### Run local demo
+
+Clone this repository, and run the following commands
 ```
 npm install
 ```
