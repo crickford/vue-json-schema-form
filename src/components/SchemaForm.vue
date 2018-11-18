@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="submit">
-    <slot name="header">
+    <slot name="header" :error-messages="activeErrorMessages">
       <b-notification
         v-show="activeErrorMessages.length"
         type="is-danger"
