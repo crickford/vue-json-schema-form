@@ -2,9 +2,9 @@
   "name": "vue-json-schema-form",
   "main": "./dist/vue-json-schema-form.umd.js",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/crickford/vue-json-schema-form.git"
-    },
+    "type": "git",
+    "url": "https://github.com/crickford/vue-json-schema-form.git"
+  },
   "homepage": "https://github.com/crickford/vue-json-schema-form",
   "files": [
     "dist/*",
@@ -17,7 +17,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "ajv": "^6.5.4",
@@ -33,7 +35,8 @@
     "node-sass": "^4.9.4",
     "sass-loader": "^7.1.0",
     "vue": "^2.5.17",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "vuepress": "^0.14.5"
   },
   "peerDependencies": {
     "buefy": "^0.7.0",
