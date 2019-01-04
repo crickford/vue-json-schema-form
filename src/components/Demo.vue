@@ -88,6 +88,27 @@ export default {
               "example": "j-dough"
             }
           },
+          "address": {
+            "type": "object",
+            "title": "Address",
+            "properties": {
+              "lineOne": {
+                "type": "string",
+                "title": "Address line 1",
+                "example": "Address line 1"
+              },
+              "lineTwo": {
+                "type": "string",
+                "title": "Address line 2",
+                "example": "Address line 2"
+              },
+              "postalCode": {
+                "type": "string",
+                "title": "Postal code",
+                "example": "Postal code"
+              }
+            }
+          },
           "age": {
             "title": "Age",
             "description": "Age in years which must be equal to or greater than zero.",
