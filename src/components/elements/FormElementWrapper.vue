@@ -23,6 +23,11 @@ export default {
       internalValue: (this.value !== undefined) ? this.value : {}
     }
   },
+  watch: {
+    value(val) {
+      this.internalValue = val
+    }
+  },
   methods: {
     updateValue (value, child) {
       this.internalValue[child] = value
