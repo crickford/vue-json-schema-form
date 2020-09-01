@@ -30,7 +30,7 @@
     "@vue/cli-plugin-eslint": "^3.0.5",
     "@vue/cli-service": "^3.3.0",
     "autosize": "^4.0.2",
-    "buefy": "^0.7.0",
+    "buefy": "^0.7.2",
     "lodash.debounce": "^4.0.8",
     "node-sass": "^4.9.4",
     "sass-loader": "^7.1.0",
@@ -39,7 +39,7 @@
     "vuepress": "^0.14.5"
   },
   "peerDependencies": {
-    "buefy": "^0.7.0",
+    "buefy": "^0.7.2",
     "vue": "^2.5.17"
   },
   "eslintConfig": {
