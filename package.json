@@ -22,7 +22,7 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "ajv": "^6.5.4",
+    "ajv": "^6.12.3",
     "json-pointer": "^0.6.0"
   },
   "devDependencies": {
