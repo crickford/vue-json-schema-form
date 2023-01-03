@@ -28,7 +28,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-plugin-eslint": "^3.0.5",
-    "@vue/cli-service": "^3.3.0",
+    "@vue/cli-service": "^5.0.8",
     "autosize": "^4.0.2",
     "buefy": "^0.7.0",
     "lodash.debounce": "^4.0.8",
@@ -36,7 +36,7 @@
     "sass-loader": "^7.1.0",
     "vue": "^2.5.17",
     "vue-template-compiler": "^2.5.17",
-    "vuepress": "^0.14.5"
+    "vuepress": "^1.9.7"
   },
   "peerDependencies": {
     "buefy": "^0.7.0",
